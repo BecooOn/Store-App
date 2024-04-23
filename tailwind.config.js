@@ -8,6 +8,7 @@ module.exports = {
         navbarColor: "#F2EAE1",
         labelColor: "#6C6C6C",
         white: "#fff",
+        login: "#a08989"
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
