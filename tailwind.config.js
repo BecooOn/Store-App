@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        anta: ["Anta", "sans-serif"],
       },
       fontSize: {
         label: [
