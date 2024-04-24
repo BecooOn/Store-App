@@ -12,7 +12,7 @@ const Testimonial = () => {
                     <ul>
                         {
                             testimonials.map((item, idx) => (
-                                currentTestimonial == idx ? (
+                                currentTestimonial === idx ? (
                                     <li key={idx}>
                                         <figure>
                                             <blockquote>
@@ -21,7 +21,7 @@ const Testimonial = () => {
                                                 </p>
                                             </blockquote>
                                             <div className="mt-6">
-                                                <img src={item.avatar} className="w-16 h-16 mx-auto rounded-full" />
+                                                <img src={item.avatar} className="w-16 h-16 mx-auto rounded-full" alt="img"/>
                                                 <div className="mt-3">
                                                     <span className="block text-gray-800 font-semibold">{item.name}</span>
                                                     <span className="block text-gray-600 text-sm mt-0.5">{item.title}</span>
@@ -39,7 +39,7 @@ const Testimonial = () => {
                         {
                             testimonials.map((item, idx) => (
                                 <li key={idx}>
-                                    <button className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-main focus:ring ${currentTestimonial == idx ? "bg-main" : "bg-gray-300"}`}
+                                    <button className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-main focus:ring ${currentTestimonial === idx ? "bg-main" : "bg-gray-300"}`}
                                         onClick={() => setCurrentTestimonial(idx)}
                                     ></button>
                                 </li>

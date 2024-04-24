@@ -1,9 +1,41 @@
-import React from 'react'
+import axios from "axios";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
-const ProductProvider = () => {
+const ProductContext = createContext();
+
+const ProductProvider = ({ children }) => {
+  const [products, setProducts] = useState();
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const getData = async () => {
+      setLoading(true);
+      try {
+        const res = await axios(
+          `https://dummyjson.com/products/search?q=${search}`
+        );
+        const data = res.data;
+        setProducts(data.products);
+        // console.log(data.products);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getData();
+  }, [search]);
+
+  const values = { products, loading, search,setSearch };
   return (
-    <div>ProductProvider</div>
-  )
-}
+    <ProductContext.Provider value={values}>{children}</ProductContext.Provider>
+  );
+};
 
-export default ProductProvider
+export const useProductsContext = () => {
+  return useContext(ProductContext);
+};
+
+export default ProductProvider;

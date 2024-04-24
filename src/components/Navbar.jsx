@@ -12,7 +12,7 @@ const navigation = [
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <nav className="bg-white text-lg font-anta border-b-4 border-b-[#FEAF00]">
+    <nav className="bg-[#feae001a] text-lg font-anta border-b-4 border-b-[#FEAF00]">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block">
           <a

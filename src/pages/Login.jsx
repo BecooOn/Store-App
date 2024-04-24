@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 const Login = () => {
   return (
     <div className="bg-main flex justify-center min-h-screen p-5">
-      <form className="border border-2 flex flex-col items-center w-[250px] h-96 mt-[100px] bg-login text-center">
+      <form className="border-2 flex flex-col items-center w-[250px] h-96 mt-[100px] bg-login text-center">
         <img
           src={logo}
           alt="becooOn"
@@ -33,7 +33,7 @@ const Login = () => {
           {/* <Link to="/reset">Forgot your password?</Link> */}
         </div>
         <div className="mb-3">
-          <button type="submit" className="border border-2 w-[150px] bg-main p-2 text-white rounded-[8px] hover:bg-yellow-400">
+          <button type="submit" className="border-2 w-[150px] bg-main p-2 text-white rounded-[8px] hover:bg-yellow-400">
             SIGN IN
           </button>
         </div>
