@@ -1,25 +1,6 @@
 import { stats } from "../helper/data";
 const Stats = () => {
 
-    // const stats = [
-    //     {
-    //         data: "3.5M+",
-    //         title: "Customers"
-    //     },
-    //     {
-    //         data: "10M+",
-    //         title: "Downloads"
-    //     },
-    //     {
-    //         data: "100M+",
-    //         title: "Countries"
-    //     },
-    //     {
-    //         data: "150M+",
-    //         title: "Total revenue"
-    //     },
-    // ]
-
     return (
         <section className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">

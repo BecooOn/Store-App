@@ -7,13 +7,11 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-
   const { logIn } = useAuthProvider();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      email.toLocaleLowerCase() === "a@b.com" && pass === "admin") {
+    if (email.toLocaleLowerCase() === "a@b.com" && pass === "1234") {
       logIn({ email, pass });
     } else {
       iziToast.show({
@@ -42,7 +40,7 @@ const Login = () => {
         <input
           type="text"
           id="email"
-          placeholder="📧 e-mail=>a@b.com"
+          placeholder="📧 e-mail = a@b.com"
           className="mt-6 p-2 w-10/12 peer"
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -52,7 +50,7 @@ const Login = () => {
           type="password"
           id="password"
           className="mb-3 p-2 w-10/12"
-          placeholder="🔑 password=>admin"
+          placeholder="🔑 password = 1234"
           onChange={(e) => setPass(e.target.value)}
           required
         />

@@ -7,7 +7,7 @@ const AuthProvider = (props) => {
     JSON.parse(sessionStorage.getItem("user")) || null
   );
 
-  //?Kullanıcı login olduğunda home sayfasına yönlendirebilmek için
+  //?Kullanıcı login olduğunda, home sayfasına yönlendirebilmek için
   const navigate = useNavigate();
   const logIn = ({ email, password }) => {
     setUser({ email, password });

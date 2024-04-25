@@ -22,6 +22,7 @@ const ProductDetail = () => {
     getDetail();
   }, [id]);
 
+  //? Küçük arasında dolaşıp, tıklanan fotoğrafın ana fotoğraf olabilmesi için
   const changeMainImage = (item) => {
     setDetail((prev) => ({ ...prev, thumbnail: item }));
   };
