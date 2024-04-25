@@ -25,9 +25,9 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#aca6a6] flex justify-center min-h-screen p-5">
+    <div className="bg-[#aca6a6] flex justify-center items-center min-h-screen p-5">
       <form
-        className="border-2 flex flex-col items-center w-[280px] h-[400px] mt-[100px] bg-login text-center"
+        className="border-2 flex flex-col items-center w-[280px] h-[400px] bg-login text-center"
         onSubmit={handleSubmit}
       >
         <img

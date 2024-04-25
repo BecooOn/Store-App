@@ -62,7 +62,7 @@ const ProductDetail = () => {
                 <span className="block text-gray-900">
                   Category :{category}{" "}
                 </span>
-                <span className="block  text-sm">Price : {price * 33} ₺</span>
+                <span className="block text-lg font-bold">Price : {price * 33} ₺</span>
               </div>
             </div>
             <div className="flex justify-center gap-3 mt-12">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink,useLocation } from "react-router-dom";
 import { openNavbar, closeNavbar, logoutIcon } from "../helper/icons";
 import { useAuthProvider } from "../context/AuthProvider";
 
@@ -12,6 +12,7 @@ const navigation = [
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const location = useLocation();
   const {user} = useAuthProvider();
   return (
     <nav className="bg-[#feae001a] text-lg font-anta border-b-4 border-b-[#FEAF00]">
@@ -27,7 +28,7 @@ const Navbar = () => {
               src={logo}
               width={50}
               height={50}
-              alt="Clarusway"
+              alt="BecooOn"
               className=" rounded-full"
             />
             <span className="text-gray-700 hover:text-gray-900 font-medium">
@@ -50,7 +51,9 @@ const Navbar = () => {
             {navigation.map((item) => (
               <li key={item.title} className="text-gray-700 font-medium text-center">
               <NavLink
-                className="block hover:bg-main rounded-full py-2 px-4 hover:text-white "
+                 className={`block hover:bg-main rounded-full py-2 px-4 hover:text-white ${
+                  location.pathname === item.path ? "scale-115 bg-main text-white" : ""
+                } `}
                 to={item.path}
               >
                 {item.title}
