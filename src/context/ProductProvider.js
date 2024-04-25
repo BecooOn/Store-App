@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -13,7 +13,7 @@ const ProductProvider = ({ children }) => {
       setLoading(true);
       try {
         const res = await axios(
-          `https://dummyjson.com/products/search?q=${search}`
+          `https://dummyjson.com/products/search?q=${search}&limit=100` //? limit ile kaç tane ürünü sergilemek istediğimi belirttim, eğer skip kullansaydım belirli bir yerden başlatmak için kullanacaktım.
         );
         const data = res.data;
         setProducts(data.products);

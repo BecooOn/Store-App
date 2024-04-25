@@ -88,8 +88,8 @@ export const team = [
   },
   {
     avatar:
-      "https://ca.slack-edge.com/T06BXPTNG1H-U06BZMHJEGJ-gcce68773a90-512",
-    name: "Ersin",
+      "https://ca.slack-edge.com/T06BXPTNG1H-U06C0S2BFGB-32c50024b778-48",
+    name: "Adem",
     title: "Full Stack Developer",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesettin industry.",
     linkedin: "www.google.com",
