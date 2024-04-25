@@ -22,7 +22,7 @@ için
 ```https://dummyjson.com/products/search?q=${query}```
 
 ## Proje İskeleti
-
+```
 📦src
  ┣ 📂assets
  ┃ ┗ 📜logo.png
